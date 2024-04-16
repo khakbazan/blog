@@ -1,0 +1,33 @@
+.input_focus {
+  input,
+  textarea {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &:focus-within {
+    label {
+      color: #1273eb;
+    }
+
+    input,
+    textarea {
+      border-color: #1273eb;
+    }
+  }
+}
+
+.input_focus:focus-within > label {
+  top: 0;
+  padding: 0 0.5rem;
+}
+
+.input_focus input:not(:placeholder-shown) + label {
+  top: 0;
+  padding: 0 0.5rem;
+}
+.input_focus textarea:not(:placeholder-shown) + label {
+  top: 0;
+  padding: 0 0.5rem;
+}

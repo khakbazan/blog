@@ -1,0 +1,123 @@
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes dash_check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+@keyframes dash_check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+@-webkit-keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100px;
+  }
+  100% {
+    stroke-dashoffset: 200px;
+  }
+}
+@keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@-webkit-keyframes checkmark_circle {
+  0% {
+    stroke-dashoffset: 480px;
+  }
+  100% {
+    stroke-dashoffset: 960px;
+  }
+}
+@keyframes checkmark_circle {
+  0% {
+    stroke-dashoffset: 480px;
+  }
+  100% {
+    stroke-dashoffset: 960px;
+  }
+}
+@keyframes colored_circle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.w4rAnimated_checkmark {
+  svg {
+    width: 115px;
+    display: block;
+    margin: 40px auto 0;
+  }
+  .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+  }
+  .path.circle {
+    -webkit-animation: dash 1.25s ease-in-out;
+    animation: dash 1.25s ease-in-out;
+  }
+  .path.line {
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash 1.25s 0.5s ease-in-out forwards;
+    animation: dash 1.25s 0.5s ease-in-out forwards;
+  }
+  .path.check {
+    stroke-dashoffset: -100;
+    -webkit-animation: dash_check 1.25s 0.5s ease-in-out forwards;
+    animation: dash_check 1.25s 0.5s ease-in-out forwards;
+  }
+}
+.circle-before {
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-left: 1px dashed #f9f9f9;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: calc(50% - 8px);
+    right: -9px;
+  }
+}
+.circle-after {
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-right: 1px dashed #f9f9f9;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: calc(50% - 8px);
+    left: -9px;
+  }
+}

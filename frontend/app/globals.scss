@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-size: 15px;
+  font-weight: normal;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+@layer utilities {
+  body {
+    @apply bg-gray-1 text-black-2;
+  }
+
+  a:hover {
+    @apply text-primary;
+  }
+
+  p,
+  span,
+  a {
+    @apply text-xs sm:text-sm;
+  }
+
+  p {
+    @apply leading-5 md:leading-6 xl:leading-7;
+  }
+
+  h1 {
+    @apply text-lg sm:text-xl font-black text-black-1;
+  }
+
+  h2 {
+    @apply text-base sm:text-lg font-semibold text-black-2;
+  }
+
+  h3 {
+    @apply text-sm sm:text-base font-semibold text-black-2;
+  }
+
+  .box {
+    @apply bg-white border border-gray-300 p-3.5 sm:p-5 rounded-lg;
+  }
+
+  .skeleton {
+    @apply bg-gray-300 animate-pulse;
+  }
+
+  .post-body-styles {
+    h2 {
+      @apply pb-2.5;
+    }
+
+    h3 {
+      @apply pb-2.5;
+    }
+
+    h4 {
+      @apply pb-2.5;
+    }
+
+    p {
+      @apply text-justify pb-4;
+    }
+  }
+}
